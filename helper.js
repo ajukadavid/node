@@ -3,6 +3,15 @@ const user = function(data){
 }
 
 let id = function(id){
-    return id;
+    return `${id}`;
 }
-module.exports = helper
+
+let email = function(email) {
+    return `${email}`
+}
+
+module.exports = {
+    user,
+    id,
+    email
+}

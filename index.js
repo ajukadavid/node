@@ -1,3 +1,8 @@
-const helper = require('./helper');
+const events = require('events');
 
-console.log(helper('12'))
+const myEmitter = new events.EventEmitter;
+myEmitter.on('test', function(arg){
+    console.log(arg)
+})
+
+myEmitter.emit('test', 'hello world')
