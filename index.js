@@ -4,14 +4,15 @@ const fs = require('fs')
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, {
-        'Content-type': 'text/html'
+        'Content-type': 'application/json'
     })
-    
-const readStream = fs.createReadStream(__dirname + '/index.html', 'utf-8')
+    const person = {
+        name: 'Alex',
+        email: 'alex@gmail.com',
+        job: 'designer'
+    }
 
-readStream.pipe(res)
-
-
+    res.end(JSON.stringify(person))
 })
 
 server.listen(3000, '127.0.0.1')
