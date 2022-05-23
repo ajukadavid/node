@@ -4,10 +4,10 @@ const fs = require('fs')
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, {
-        'Content-type': 'text/plain'
+        'Content-type': 'text/html'
     })
     
-const readStream = fs.createReadStream(__dirname + '/readme.txt', 'utf-8')
+const readStream = fs.createReadStream(__dirname + '/index.html', 'utf-8')
 
 readStream.pipe(res)
 
