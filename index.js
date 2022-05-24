@@ -1,15 +1,21 @@
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const app = express();
 
-app.get('/', (req, res) => {
-res.send('Home page')
-})
-app.get('/profile/:num', (req, res) => {
-    console.log(req.params)
-    
+app.get("/", (req, res) => {
 
-    res.send('profile id is ' + req.params.num)
-    })
+  res.sendFile(__dirname + '/index.html')
 
-app.listen(3000)
+});
+
+app.get("/about", (req, res) => {
+    res.sendFile(__dirname + '/about.html')
+});
+
+app.get("/profile/:num", (req, res) => {
+  console.log(req.params);
+
+  res.send("profile id is " + req.params.num);
+});
+
+app.listen(3000);
