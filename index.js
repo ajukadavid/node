@@ -15,7 +15,7 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/profile/:name", (req, res) => {
-    const data = {age: 30, job: 'developer'}
+    const data = {age: 30, job: 'developer', friends: ['sarah', 'jane', 'wilma']}
  res.render('profile', {person: req.params.name, data})
 });
 
