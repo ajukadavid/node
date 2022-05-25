@@ -11,6 +11,10 @@
             font-size: 21px;
             text-align: center;
         }
+        li {
+            margin: auto;
+            width: fit-content;
+        }
     </style>
 </head>
 <body>
@@ -22,9 +26,9 @@
     <h2>Friends</h2>
 
     <ul>
-        <% data.friends.forEach((item) =>{
-            
-        })
+        <% data.friends.forEach((item) =>{ %>
+            <li><%= item %></li>
+       <% }) %>
     </ul>
 </body>
 </html>
