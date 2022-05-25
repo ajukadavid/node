@@ -6,12 +6,12 @@ app.set('view engine', 'ejs')
 
 app.get("/", (req, res) => {
 
-  res.sendFile(__dirname + '/index.html')
+  res.render('index')
 
 });
 
 app.get("/about", (req, res) => {
-    res.sendFile(__dirname + '/about.html')
+    res.render('about')
 });
 
 app.get("/profile/:name", (req, res) => {
