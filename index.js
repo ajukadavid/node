@@ -16,8 +16,8 @@ app.get("/about", (req, res) => {
 });
 
 app.post("/about", urlencodedParser, (req, res) => {
-  console.log(req.body)
-  res.render('about', {qs: req.query})
+
+  res.render('about-success', {data: req.body})
 });
 
 app.get("/profile/:name", (req, res) => {
